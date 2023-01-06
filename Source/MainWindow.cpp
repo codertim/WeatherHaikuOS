@@ -33,6 +33,12 @@
 #include "CitiesListSelectionWindow.h"
 #include "Util.h"
 
+
+#include <iostream>
+using namespace std;
+
+
+
 #undef B_TRANSLATION_CONTEXT
 #define B_TRANSLATION_CONTEXT "MainWindow"
 
@@ -297,6 +303,7 @@ MainWindow::AboutRequested()
 bool
 MainWindow::QuitRequested()
 {
+        cout << "##### MainWindow::QuitRequested" << endl;
 	_SaveSettings();
 	return true;
 }

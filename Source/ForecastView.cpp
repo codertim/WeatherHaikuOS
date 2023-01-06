@@ -1026,7 +1026,10 @@ ForecastView::IsFahrenheitDefault()
 		if (strcmp(conventions.CountryCode(), "VI") == 0)
 			return true;
 	}
-	return false;
+
+
+	return true;   // TODO: remove
+	// return false;   // TODO: uncomment
 }
 
 
