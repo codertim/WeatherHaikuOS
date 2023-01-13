@@ -103,6 +103,7 @@ MainWindow::MainWindow()
 void
 MainWindow::MessageReceived(BMessage* msg)
 {
+	cout << "MainWindow::MessageReived starting ...";
 	switch (msg->what) {
 		case kUpdateCityMessage:
 		{
@@ -228,6 +229,7 @@ MainWindow::MessageReceived(BMessage* msg)
 status_t
 MainWindow::_SaveSettings()
 {
+	cout << "MainWindow::_SaveSettings - starting ...";
 	BPath p;
 	BFile f;
 	BMessage m(kSettingsMessage);
@@ -267,6 +269,7 @@ MainWindow::MenusBeginning()
 void
 MainWindow::AboutRequested()
 {
+	cout << "MainWindow::AboutRequested - starting ...";
 	BAboutWindow* about = new BAboutWindow(B_TRANSLATE_SYSTEM_NAME("Weather"),
 		"application/x-vnd.przemub.Weather");
 
